@@ -87,15 +87,23 @@ footer {
 }
 
 .red {
-  background-image: url("https://cdn.pixabay.com/photo/2014/04/04/14/55/jeans-313305_960_720.jpg");
+  background-image: url("https://www.safety4sea.com/wp-content/uploads/2016/07/knowledge-library-620x330.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+.red p{
+    color: black;
+    font-weight: bold;
+    font-size: 20px !important;
+}
 .amber {
   background-image: url("https://thumbs.dreamstime.com/z/books-apple-school-supply-white-background-education-learn-teaching-study-related-work-66837514.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+.amber p{
+    font-size: 20px !important;
+    font-weight: bold;
 }
 
 .green {
@@ -103,13 +111,19 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+.green p{
+    font-size: 20px !important;
+    font-weight: bold;
+}
 .blue {
   background-image: url("https://ak8.picdn.net/shutterstock/videos/21895144/thumb/7.jpg?i10c=img.resize(height:160)");
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+.blue p{
+    font-size: 20px !important;
+    font-weight: bold;
+}
 .desc {
   font-size: 25px;
   margin-top: 0px;
