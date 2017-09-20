@@ -389,6 +389,8 @@ function listUpcomingEvents() {
         btnMap.html('<i class="fa fa-globe" aria-hidden="true"></i>');
         btnMap.attr("id", "map");
         btnMap.addClass("btnClass");
+        btnMap.addClass("mapBtn");
+        btnMap.attr("data-loc", event.location);
         td4.append(btn).append(btnMap);
         row.append(td1).append(td2).append(td3).append(owner).append(td4);
         $("#event-data").append(row);
