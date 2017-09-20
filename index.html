@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rutgers Scheduler</title>
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:600" rel="stylesheet">
+</head>
+
+<body>
+    <!-- <nav class="#2E3C3A" role="navigation"> -->
+    <nav>
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo">Scheduler</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html" type="button" id="home">Home</a></li>
+                <li><a type="button" class="button" id="users">Users</a></li>
+                <li><a class="waves-effect waves-light btn" type="button" class="button" id="signIn">LOGIN</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="side-nav">
+                <li><a href="index.html" class="waves-effect waves-light btn" type="button" id="users">Home</a></li>
+                <li><a class="waves-effect waves-light btn" type="button" class="button" id="users">Users</a></li>
+                <li><a class="waves-effect waves-light btn" type="button" class="button" id="signIn">LOGIN</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+    <div id="banner">
+        <div id="index-banner" class="parallax-container">
+            <div class="section no-pad-bot">
+                <div class="container">
+                    <br><br>
+                    <div class="carousel carousel-slider center" data-indicators="true">
+                        <div class="carousel-item red white-text" href="#one!">
+                            <p class="car_p">"Seeing much, suffering much, and studying much, are the three pillars of learning"</p>
+                        </div>
+                        <div class="carousel-item amber white-text" href="#two!">
+                            <p class="car_p" style="color:black">"Push yourself because no one else is going to do it for you"</p>
+                        </div>
+                        <div class="carousel-item green white-text" href="#three!">
+                            <p class="car_p">"Nothing is impossible. The word itself says 'I’m Possible'"</p>
+                        </div>
+                        <div class="carousel-item blue white-text" href="#four!">
+                            <p class="car_p"> "When you feel like quitting, think about why you started"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col s8 t_news">
+                    <!-- Promo Content 1 goes here -->
+                    <div>
+                        <div>
+                            <p class="desc">About Rutgers Bootcamp</p>
+                            <hr>
+                        </div>
+                        <div>
+                            <p>
+                                This program is right for anyone who is intellectually curious, ready for a career change or advancement, and above all—hard
+                                working.
+                            </p>
+                            <ul class="collection">
+                                <li class="collection-item">Individuals looking to change companies or careers—or shift from a non-technical to technical
+                                    role in their company.</li>
+                                <li class="collection-item">Individuals who want to freelance and supplement their current income—or engage more productively
+                                    with their job.</li>
+                                <li class="collection-item">Individuals working to acquire the skills to go “all in” on an entrepreneurial idea and build
+                                    their product.</li>
+                                <li class="collection-item">Individuals with a hunger for additional knowledge or wanting to enhance their skills while
+                                    in college</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s4 t_news">
+                    <!-- Promo Content 2 goes here -->
+                    <fieldset class="fieldset brd">
+                        <legend class="fw">Tech News</legend>
+                        <div>
+                            <div id="news">
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="page-footer">
+        <div class="footer-copyright">
+            <div class="container center">
+                © 2017 Copyright Scheduler
+                <a class="grey-text text-lighten-4 right" href="#!"></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script>
+    <script src="assets/js/init.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/techcrunchapi.js"></script>
+    <script src="assets/js/carousel.js"></script>
+    <!-- <script src="assets/js/app.js"></script>  -->
+</body>
+
+</html>

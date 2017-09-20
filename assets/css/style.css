@@ -1,0 +1,268 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+nav ul a,
+nav .brand-logo {
+  color: #F1F1F1;
+}
+
+html,
+body {
+  background-image: url("http://www.planwallpaper.com/static/images/light_background-wallpaper-1920x1080.jpg");
+  height: 100%;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+span{
+  padding-right: 5px;
+}
+.collection .collection-item {
+  background: none;
+}
+span.input-group-addon {
+  padding: 0px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #555;
+  text-align: center;
+  background-color:transparent; 
+  border: none;
+}
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255, 255, 255, .9);
+}
+
+.parallax-container .section {
+  width: 100%;
+}
+
+#logo-container {
+  font-family: 'Exo 2', sans-serif;
+  color: #26a69a;
+  font-size: 50px;
+}
+.time{
+  margin-left:20px;
+}
+nav,
+footer {
+  background-image: url("https://www.walldevil.com/wallpapers/a85/background-website-web-grey-themes-shopperpress.jpg");
+}
+
+.s_btn {
+  margin-top: 250px;
+  height: 50px !important;
+  padding-top: 0px !important;
+}
+
+.teal {
+  height: 80px;
+  padding-top: 11px;
+}
+
+.t_news {
+  margin-top: 50px;
+}
+
+.fw {
+  font-size: 25px;
+}
+
+.brd {
+  border: 1px solid gray;
+}
+
+.red {
+  background-image: url("https://cdn.pixabay.com/photo/2014/04/04/14/55/jeans-313305_960_720.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.amber {
+  background-image: url("https://thumbs.dreamstime.com/z/books-apple-school-supply-white-background-education-learn-teaching-study-related-work-66837514.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.green {
+  background-image: url("https://www.colourbox.com/preview/2979048-the-magic-book-and-the-letters-on-a-dark-background-with-formula-education-concept.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.blue {
+  background-image: url("https://ak8.picdn.net/shutterstock/videos/21895144/thumb/7.jpg?i10c=img.resize(height:160)");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.desc {
+  font-size: 25px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+img {
+  height: 150px;
+  width: 150px;
+  /* border-radius: 50%; */
+  border-radius: 50%;
+}
+
+h4 {
+  margin-top: 0px;
+}
+
+.c-btn {
+  font-size: 14px;
+  text-transform: capitalize;
+  font-weight: 600;
+  display: inline-block;
+  line-height: 36px;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  min-width: 88px;
+  height: 36px;
+  margin: 10px 8px;
+  padding: 0 8px;
+  text-align: center;
+  letter-spacing: .5px;
+  border-radius: 2px;
+  background: #F1F1F1;
+  color: #393939;
+  transition: background 200ms ease-in-out;
+  box-shadow: 0 3.08696px 5.82609px 0 rgba(0, 0, 0, 0.16174), 0 3.65217px 12.91304px 0 rgba(0, 0, 0, 0.12435);
+}
+
+.c-btn--flat {
+  background: transparent;
+  margin: 10px 8px;
+  min-width: 52px;
+}
+
+.c-btn:hover {
+  background: rgba(153, 153, 153, 0.2);
+  color: #393939;
+}
+
+.c-btn:active {
+  box-shadow: 0 9.6087px 10.78261px 0 rgba(0, 0, 0, 0.17217), 0 13.56522px 30.3913px 0 rgba(0, 0, 0, 0.15043);
+}
+
+.c-btn--flat,
+.c-btn--flat:hover,
+.c-btn--flat:active {
+  box-shadow: none;
+}
+
+.abc {
+  border: 1px solid rgba(68, 66, 66, 0.39);
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+#sm {
+  overflow: auto;
+}
+
+.row .col.offset-m1 {
+  margin-left: 4%;
+}
+
+.card {
+  margin: 0rem 0 0rem 0;
+  background: -webkit-linear-gradient(rgba(240, 240, 241, 0.6));
+}
+
+#banner {
+  min-height: 90%;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.btn i,
+.btn-large i,
+.btn-floating i,
+.btn-large i,
+.btn-flat i {
+  font-size: 1rem;
+}
+
+.btn,
+.btn-large,
+.btn-flat {
+  padding: 0 1.2rem;
+  /* border-radius: 50%; */
+  background-color: #26a69a;
+}
+
+#delete,
+#edit {
+  width: 0px;
+  margin: 1px; 
+  margin-bottom: 15px;
+}
+
+#authorize-button,
+#signout-button {
+  margin-top: 10px;
+}
+
+#owner {
+  margin-left: 40px;
+}
+
+.ttl {
+  font-family: 'IM Fell Great Primer', serif;
+  color: orangered;
+  padding: 15px;
+  font-size:35px;
+}
+
+@media only screen and (max-width: 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+.dataBtns {
+  margin-left: 20px;
+}

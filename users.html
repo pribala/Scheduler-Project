@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rutgers Scheduler</title>
+
+  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:900|Exo+2:600|IM+Fell+Great+Primer" rel="stylesheet">
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.2.15/angular-locale_ko-kr.js">
+  <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/css/dataTables.material.min.css" />
+</head>
+</head>
+
+<body>
+  <!-- <nav class="white" role="navigation"> -->
+  <nav>
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">Scheduler</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="users.html">Users</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="users.html">Users</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  </br>
+  <!--div to display images-->
+  <div class="row">
+    <div class="col s12 col m7 offset-m1">
+      <div class="card">
+        <div class="card-divider">
+          <h4 class="ttl">
+            STAFF
+          </h4>
+          <hr>
+        </div>
+        <div class="card-section">
+          <div class="row s4 m4" id="staff-panel">
+          </div>
+        </div>
+        <h4 class="ttl"> STUDENTS </h4>
+        <hr>
+        <div class="row s2 m3 l6" id="student-panel">
+        </div>
+      </div>
+    </div>
+    <!--Form validation with icons-->
+    <div class="row">
+      <div class="card col s12 m4" id="form">
+        <div class="card-divider" id="title">
+          <h4 class="ttl">
+            Add User
+          </h4>
+          <hr>
+        </div>
+        <div class="card-section">
+          <form class="col s12 m12 right-alert">
+            <div class="row">
+              <div class="input-field col s12 m12">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="firstName" type="text" class="validate">
+                <label for="first_input2" data-error="Please enter first name." data-success="Perfect!">First Name*</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 m12">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="lastName" type="text" class="validate" required />
+                <label for="Lastname">Last Name*</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 m12">
+                <i class="material-icons prefix">email</i>
+                <input id="email" type="email" class="validate">
+                <label for="email_input2" class="" data-error="Please enter valid email." data-success="I Like it!">Email*</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 m12">
+                <i class="material-icons prefix">insert_link</i>
+                <input id="imageUrl" type="url" class="validate">
+                <label for="url_input2" class="" data-error="Please enter valid url." data-success="I know you!">URL*</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 m12">
+                <i class="material-icons prefix">message</i>
+                <textarea id="bio" class="materialize-textarea validate" length="120"></textarea>
+                <label for="message2" class="">Bio*</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12 m12">
+                <i class="material-icons perfix">group</i>
+                <label for="role_select">Role *</label>
+                <p>
+                  <input type="radio" name="role" value="Instructor" id="Instructor" required><label for="Instructor">Instructor</label>
+                  <input type="radio" name="role" value="TA" id="TA"><label for="TA">TA</label>
+                  <input type="radio" name="role" value="Student" id="Student"><label for="Student">Student</label>
+                  <input type="radio" name="role" value="CareerServices" id="CareerServices"><label for="CareerServices">Career Services</label>
+                </p>
+                <div class="input-field">
+                  <div class="errorTxt8"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 m12">
+                <button class="btn waves-effect waves-light left" type="submit" id="addUser" name="action">Submit
+                  <i class="mdi-content-send right"></i></button><button class="btn waves-effect waves-light left" id="update">Update</button>
+                 <button class="btn waves-effect waves-light dataBtns" id="cancel">Cancel</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="page-footer">
+    <div class="footer-copyright">
+      <div class="container center">
+        © 2017 Copyright Scheduler
+        <a class="grey-text text-lighten-4 right" href="#!"></a>
+      </div>
+    </div>
+  </footer>
+  <!-- Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script>
+  <script src="assets/js/config.js"></script>
+  <!-- <script src="assets/js/techcrunchapi.js"></script> -->
+  <script src="assets/js/init.js"></script>
+  <script src="assets/js/app.js"></script>
+
+
+
+</body>
+
+</html>

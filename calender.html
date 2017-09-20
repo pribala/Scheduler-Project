@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rutgers Scheduler</title>
+
+  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:900|Exo+2:600|IM+Fell+Great+Primer" rel="stylesheet">
+  <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+
+  <!--Requirement jQuery-->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link type="text/css" href="assets/css/jquery.simple-dtpicker.css" rel="stylesheet" />
+  <script type="text/javascript" src="assets/js/js-1/dtpicker.js"></script>
+
+
+</head>
+</head>
+
+<body>
+  <!-- <nav class="white" role="navigation"> -->
+  <nav>
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">Scheduler</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="users.html">Users</a></li>
+        <li><a class="waves-effect waves-light btn" type="button" class="button" id="authorize-button">Authorize</a></li>
+        <li><a class="waves-effect waves-light btn" type="button" class="button" id="signout-button">Sign Out</a></li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="users.html">Users</a></li>
+        <li><a class="waves-effect waves-light btn" type="button" class="button" id="authorize-button">Authorize</a></li>
+        <li><a class="waves-effect waves-light btn" type="button" class="button" id="signout-button">Sign Out</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <!--div to display images-->
+  <div class="row">
+
+    <div id="owner">
+      <h5>Name:</h5>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="container col m8 offset-m1 abc" id="sm">
+      <h5 class="ttl">Schedule a Meeting</h5>
+      <hr>
+      <table class="responsive-table">
+        <thead>
+          <tr>
+            <th>Event Summary</th>
+            <th>Location</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Requested by</th>
+            <th>Attendees</th>
+          </tr>
+        </thead>
+        <tbody id="pendingEvents">
+        </tbody>
+      </table>
+    </div>
+    <div class="card col s12 m3  offset-m1 abc" id="3rdpageform">
+      <div class="card-divider col s12 m12">
+        <h5 class="ttl">
+          Add Event</h5>
+        <hr>
+      </div>
+      <div class="card-section">
+        <form class="col s12 m12 right-alert">
+          <div class="row">
+            <div class="input-field col s12 m12">
+              <i class="material-icons prefix">event_note</i>
+              <label for="Summary" data-error="Enter event summary" data-success="Perfect!">Event Summary*</label>
+              <input type="text" id="summary" class="validate" placeholder="">
+            </div>
+          </div>
+          <div class="row">
+            <div id="locationField" class="input-field col s12 m12">
+              <i class="material-icons prefix">add_location</i>
+              <input id="autocomplete" placeholder="" onFocus="geolocate()" type="text"></input>
+              <label for="Location" data-error="Enter event location" data-success="Perfect!">Location*</label>
+            </div>
+          </div>
+          <div class='input-field  col-s12'>
+               <div class="form-group"> 
+                <div class='input-group date' id='datetimepicker1'>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                    <input type='text' class="form-control" ame="date" id="startTime" value="" placeholder=""/>                 
+                    <label for="Starttime" class= "time" data-error="Enter start time" data-success="Perfect!"> StartTime*</label>
+                    </div>
+              </div>
+            </div> 
+          <div class='input-field  col-s12'>
+              <div class="form-group"> 
+               <div class='input-group date' id='datetimepicker2'>
+                   <span class="input-group-addon">
+                       <span class="glyphicon glyphicon-calendar"></span>
+                     </span>
+                 <input type='text' class="form-control" name="date" value="" id="endTime" value="" placeholder="" />                 
+                 <label for="Endtime" class= "time" data-error="Enter end time" data-success="Perfect!">EndTime*</label>
+                </div>
+             </div>
+           </div>
+          <div class="row">
+            <div class="input-field col s12 m12">
+              <div class="container1">
+                <div><i class="material-icons prefix">email</i><label for="email">Email*</label><input id="attendees" type="text"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s4 m1">
+              <button class="btn waves-effect waves-light left" type="submit" id="addEvent" name="action">Submit
+                    <i class="mdi-content-send right"></i> </button>
+              <button class="btn waves-effect waves-light left" id="update">Update</button><br><span id="message"></span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="container col m7 offset-m1 abc">
+      <h5 class="ttl">UpComing Events</h5>
+      <hr>
+      <table class="responsive-table">
+        <thead>
+          <tr>
+            <th>Event Summary</th>
+            <th>When</th>
+          </tr>
+        </thead>
+        <tbody id="event-data">
+        </tbody>
+      </table>
+    </div>
+    <div class="conatiner col m4 offset-m1  ">
+    </div>
+  </div>
+</body>
+<footer class="page-footer">
+  <div class="footer-copyright">
+    <div class="container center">
+      © 2017 Copyright Scheduler
+      <a class="grey-text text-lighten-4 right" href="#!"></a>
+    </div>
+  </div>
+</footer>
+<!-- <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script>
+<script src="assets/js/techcrunchapi.js"></script>
+<script src="assets/js/carousel.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+<script src="assets/js/init.js"></script>
+<script src="assets/js/calendar.js"></script>
+<script src="assets/js/config.js"></script>
+<!--googlemaps auto complete-->
+<script src="assets/js/maps.js"></script>
+<script src="assets/js/events.js"></script>
+<script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()">
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAisvHaLQOATArfWk-auHFJyV9wNu6Sgnc&libraries=places&callback=initAutocomplete"
+  async defer></script>
+<!--addmore email id's in form-->
+<script src="assets/js/addemail.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
+<script>
+$(function() {
+	$('#datetimepicker1').datetimepicker();
+	$('#datetimepicker2').datetimepicker();
+  });
+</script>
+</body>
+
+</html>
