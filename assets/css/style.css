@@ -8,8 +8,11 @@
 nav ul a,
 nav .brand-logo {
   color: #F1F1F1;
+  font-size: 1.5rem;
 }
-
+label{
+  font-size: 2rem;
+}
 html,
 body {
   background-image: url("http://www.planwallpaper.com/static/images/light_background-wallpaper-1920x1080.jpg");
