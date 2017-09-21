@@ -266,3 +266,8 @@ footer.page-footer {
 .dataBtns {
   margin-left: 20px;
 }
+
+#map {
+  height: 400px;
+  width: 400px;
+}

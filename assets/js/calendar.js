@@ -84,6 +84,8 @@ function initMap() {
         geocodeAddress(geocoder, map,address);
         console.log("hello");
     });
+
+   initAutocomplete();
 }
 
 function geocodeAddress(geocoder, resultsMap,address) {
