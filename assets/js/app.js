@@ -92,7 +92,6 @@ $(document).ready(function(){
       database.ref('users/').orderByChild("id").equalTo(key).once('value').then(function(snapshot){
           var data = Object.values(snapshot.val())[0]; 
           var dataKey = Object.keys(snapshot.val())[0];
-         
           $("#firstName").val(data.firstName);
           $("#lastName").val(data.lastName);
           $("#email").val(data.email);

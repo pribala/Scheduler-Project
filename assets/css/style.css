@@ -129,7 +129,10 @@ img {
 h4 {
   margin-top: 0px;
 }
-
+h5{
+  font-family:'Exo 2', sans-serif;
+  color:black;
+}
 .c-btn {
   font-size: 14px;
   text-transform: capitalize;
@@ -192,21 +195,29 @@ h4 {
   margin: 0rem 0 0rem 0;
   background: -webkit-linear-gradient(rgba(240, 240, 241, 0.6));
 }
-
+.car_p{
+  font-size: 30px !important;
+  width: auto;
+  margin-top: 20px;
+  /* margin-left: 300px; */
+  font-weight: bold;  
+}
 #banner {
   min-height: 90%;
   margin-bottom: 20px;
   padding: 20px;
 }
-
 .btn i,
 .btn-large i,
 .btn-floating i,
 .btn-large i,
 .btn-flat i {
   font-size: 1rem;
+  color:orangered;
 }
-
+.name{
+  font-family:'Exo 2', sans-serif;
+}
 .btn,
 .btn-large,
 .btn-flat {
@@ -214,12 +225,15 @@ h4 {
   /* border-radius: 50%; */
   background-color: #26a69a;
 }
-
+.fa{
+  float:left;
+}
 #delete,
 #edit {
   width: 0px;
-  margin: 1px; 
+  margin: 10px; 
   margin-bottom: 15px;
+  background-color: transparent;
 }
 
 #authorize-button,
@@ -237,7 +251,16 @@ h4 {
   padding: 15px;
   font-size:35px;
 }
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
 
+q:before {
+    content: open-quote;
+}
+q:after {
+    content: close-quote;
+}
 @media only screen and (max-width: 992px) {
   .parallax-container .section {
     position: absolute;
