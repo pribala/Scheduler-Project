@@ -387,7 +387,7 @@ function listUpcomingEvents() {
         btn.addClass("btnClass");
         var btnMap = $("<span>");
         btnMap.html('<i class="fa fa-globe" aria-hidden="true"></i>');
-        btnMap.attr("id", "map");
+        btnMap.attr("id", event.location);
         btnMap.addClass("btnClass");
         td4.append(btn).append(btnMap);
         row.append(td1).append(td2).append(td3).append(owner).append(td4);

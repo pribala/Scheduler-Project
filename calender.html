@@ -133,7 +133,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="container col m7 offset-m1 abc">
+    <div class="container col m6 offset-m1 abc">
       <h5 class="ttl">UpComing Events</h5>
       <hr>
       <table class="responsive-table">
@@ -147,8 +147,9 @@
         </tbody>
       </table>
     </div>
-    <div class="conatiner col m4 offset-m1  ">
-    </div>
+    <div class="container col m5">
+        <div id="map"></div>
+    </div> 
   </div>
 <footer class="page-footer">
   <div class="footer-copyright">
@@ -171,8 +172,6 @@
 <script src="assets/js/events.js"></script>
 <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()">
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAisvHaLQOATArfWk-auHFJyV9wNu6Sgnc&libraries=places&callback=initAutocomplete"
-  async defer></script>
 <!--addmore email id's in form-->
 <script src="assets/js/addemail.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -185,6 +184,8 @@ $(function() {
 	$('#datetimepicker2').datetimepicker();
   });
 </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAisvHaLQOATArfWk-auHFJyV9wNu6Sgnc&callback=initMap">
+    </script>
 </body>
-
 </html>
