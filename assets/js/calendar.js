@@ -80,9 +80,9 @@ function initMap() {
     var geocoder = new google.maps.Geocoder();
 
    $("body").on('click',".mapBtn", function () {
-        var address = $(this).attr("id");
+        var address = $(this).attr("data-loc");
         geocodeAddress(geocoder, map,address);
-        console.log("hello");
+        
     });
 
    initAutocomplete();
@@ -100,7 +100,7 @@ function geocodeAddress(geocoder, resultsMap,address) {
                 position: results[0].geometry.location
             });
         } else {
-            alert('Geocode was not successful for the following reason: ' + status);
+            Materialize.toast('Geocode was not successful for the following reason: ' + status, 4000);
         }
     });
 }
